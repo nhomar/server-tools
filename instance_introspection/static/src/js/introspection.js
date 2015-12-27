@@ -1,6 +1,8 @@
 (function() {
     'use strict';
     $('.btn-reload').click(function(){
+        $('.main_info').html('');
+        $('.main_info').hide(200);
         $.ajax({
             url: "/instance_introspection/reload",
         }).done(function(html, el) {
@@ -9,6 +11,7 @@
                 url: "/instance_introspection/main_info",
             }).done(function(html, el) {
                 $('.main_info').html(html);
+                $('.main_info').show(500);
             });
         });
     });
