@@ -17,6 +17,10 @@
                 element: '.btn-reload',
             },
             {
+                title:  'Not results in the middle, it should be cleaned up.',
+                waitNot: '#accordion.results',
+            },
+            {
                 title:  'Load Repositories',
                 wait: 2000,
                 waitFor: '#accordion.results',
